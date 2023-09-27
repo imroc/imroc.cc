@@ -3,8 +3,6 @@ SHELL := /bin/bash
 init:
 	git clone --depth=1 https://github.com/imroc/kubernetes-guide.git kubernetes
 	git clone --depth=1 https://github.com/imroc/istio-guide.git istio
-update:
-	./update.sh
 run:
 	npm run start
 build:
