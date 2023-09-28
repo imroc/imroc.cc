@@ -29,6 +29,7 @@ while true; do
 	if [ $? ]; then
 		make update
 	fi
+	git reset --hard HEAD
 	./update.sh
 	if [ $? ]; then
 		npm install
