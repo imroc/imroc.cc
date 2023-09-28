@@ -119,7 +119,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        // docs: false,
+        docs: false,
         blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.scss')
