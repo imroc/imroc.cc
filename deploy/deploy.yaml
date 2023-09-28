@@ -44,3 +44,4 @@ spec:
         - name: ssh
           secret:
             secretName: ssh
+            defaultMode: 0400
