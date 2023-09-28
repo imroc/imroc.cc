@@ -27,12 +27,12 @@ cd $website_path
 while true; do
 	sleep 10
 	./update-content.sh
-	if [ $? ]; then
+	if [ "$?" == "1" ]; then
 		make update
 	fi
 	git reset --hard HEAD
 	./update.sh
-	if [ $? ]; then
+	if [ "$?" == "1" ]; then
 		npm install
 		make update
 	fi
