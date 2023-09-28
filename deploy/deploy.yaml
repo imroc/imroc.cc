@@ -29,12 +29,9 @@ spec:
               name: website
             - mountPath: /script
               name: script
-            - mountPath: /root/.ssh/id_rsa
+            - mountPath: /root/.ssh
               name: ssh
-              subPath: id_rsa
-            - mountPath: /root/.ssh/id_rsa.pub
-              name: ssh
-              subPath: id_rsa.pub
+              readOnly: true
       volumes:
         - name: website
           hostPath:
@@ -47,4 +44,3 @@ spec:
         - name: ssh
           secret:
             secretName: ssh
-            defaultMode: 0400
