@@ -13,6 +13,7 @@ if [ -d $website_path ]; then
 	else
 		echo "$website_path is not empty, skip initialization"
 		cd $website_path
+		git reset --hard HEAD
 		git pull
 		cd -
 	fi
