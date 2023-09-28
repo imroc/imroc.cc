@@ -18,6 +18,7 @@ spec:
       containers:
         - name: website
           image: node:20
+          imagePullPolicy: IfNotPresent
           securityContext:
             runAsUser: 0
             runAsGroup: 0
