@@ -32,9 +32,11 @@ spec:
             - mountPath: /root/.gitconfig
               name: gitconfig
               subPath: .gitconfig
+              readOnly: true
             - mountPath: /root/.git-credentials
               name: gitconfig
               subPath: .git-credentials
+              readOnly: true
       volumes:
         - name: website
           hostPath:
