@@ -9,10 +9,10 @@ configMapGenerator:
       - run.sh
 
 secretGenerator:
-  - name: gitconfig
+  - name: ssh
     files:
-      - ".git-credentials"
-      - ".gitconfig"
+      - "id_rsa"
+      - "id_rsa.pub"
 
 resources:
   - namespace.yaml

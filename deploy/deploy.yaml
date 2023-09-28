@@ -29,13 +29,8 @@ spec:
               name: website
             - mountPath: /script
               name: script
-            - mountPath: /root/.gitconfig
-              name: gitconfig
-              subPath: .gitconfig
-              readOnly: true
-            - mountPath: /root/.git-credentials
-              name: gitconfig
-              subPath: .git-credentials
+            - mountPath: /root/.ssh
+              name: ssh
               readOnly: true
       volumes:
         - name: website
@@ -46,6 +41,6 @@ spec:
           configMap:
             name: script
             defaultMode: 0777
-        - name: gitconfig
+        - name: ssh
           secret:
-            secretName: gitconfig
+            secretName: ssh

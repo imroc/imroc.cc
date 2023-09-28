@@ -21,6 +21,9 @@ yarn-error.log*
 
 .git-credentials
 .gitconfig
+.ssh
+id_rsa
+id_rsa.pub
 
 # books
 /kubernetes
