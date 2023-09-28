@@ -134,7 +134,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // image: 'img/docusaurus-social-card.jpg',
+      algolia: {
+        appId: 'ZYXQ3PWXL9',
+        apiKey: '69800e3da186c48e981785d47ee09e6e',
+        indexName: 'imroc',
+      },
       navbar: {
         title: 'roc 云原生',
         logo: {
