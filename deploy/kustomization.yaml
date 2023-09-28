@@ -8,6 +8,11 @@ configMapGenerator:
     files:
       - run.sh
 
+configMapGenerator:
+  - name: gitconfig
+    files:
+      - .gitconfig
+
 secretGenerator:
   - name: ssh
     files:

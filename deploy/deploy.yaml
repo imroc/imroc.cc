@@ -38,6 +38,9 @@ spec:
             - mountPath: /root/.ssh/config
               name: ssh
               subPath: config
+            - mountPath: /root/.gitconfig
+              name: gitconfig
+              subPath: .gitconfig
       volumes:
         - name: website
           hostPath:
@@ -51,3 +54,6 @@ spec:
           secret:
             secretName: ssh
             defaultMode: 0400
+        - name: gitconfig
+          configMap:
+            name: gitconfig
