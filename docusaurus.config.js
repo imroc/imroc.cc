@@ -139,6 +139,7 @@ const config = {
         appId: 'ZYXQ3PWXL9',
         apiKey: '69800e3da186c48e981785d47ee09e6e',
         indexName: 'imroc',
+        contextualSearch: false,
       },
       navbar: {
         title: 'roc 云原生',
