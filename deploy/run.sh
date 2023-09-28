@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 website_path="/data/website"
 repo="https://github.com/imroc/imroc.cc.git"
 

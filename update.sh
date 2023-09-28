@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 updated=1
 
 git fetch
