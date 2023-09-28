@@ -8,6 +8,12 @@ configMapGenerator:
     files:
       - run.sh
 
+secretGenerator:
+  - name: gitconfig
+    files:
+      - ".git-credentials"
+      - ".gitconfig"
+
 resources:
-  - website.yaml
+  - namespace.yaml
   - deploy.yaml

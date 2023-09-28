@@ -12,9 +12,15 @@ spec:
       labels:
         app: website
     spec:
+      hostNetwork: true
+      dnsPolicy: Default
+      terminationGracePeriodSeconds: 1
       containers:
         - name: website
           image: node:20
+          securityContext:
+            runAsUser: 0
+            runAsGroup: 0
           command:
             - /script/run.sh
           volumeMounts:
@@ -22,6 +28,12 @@ spec:
               name: website
             - mountPath: /script
               name: script
+            - mountPath: /root/.gitconfig
+              name: gitconfig
+              subPath: .gitconfig
+            - mountPath: /root/.git-credentials
+              name: gitconfig
+              subPath: .git-credentials
       volumes:
         - name: website
           hostPath:
@@ -31,3 +43,6 @@ spec:
           configMap:
             name: script
             defaultMode: 0777
+        - name: gitconfig
+          secret:
+            secretName: gitconfig
