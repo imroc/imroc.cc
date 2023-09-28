@@ -29,9 +29,12 @@ spec:
               name: website
             - mountPath: /script
               name: script
-            - mountPath: /root/.ssh
+            - mountPath: /root/.ssh/id_rsa
               name: ssh
-              readOnly: true
+              subPath: id_rsa
+            - mountPath: /root/.ssh/id_rsa.pub
+              name: ssh
+              subPath: id_rsa.pub
       volumes:
         - name: website
           hostPath:
