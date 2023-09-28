@@ -37,7 +37,7 @@ spec:
               subPath: id_rsa.pub
             - mountPath: /root/.ssh/config
               name: ssh
-              subPath: config
+              subPath: ssh_config
             - mountPath: /root/.gitconfig
               name: gitconfig
               subPath: .gitconfig

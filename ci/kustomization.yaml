@@ -14,9 +14,9 @@ configMapGenerator:
 secretGenerator:
   - name: ssh
     files:
-      - ".ssh/id_rsa"
-      - ".ssh/id_rsa.pub"
-      - ".ssh/config"
+      - "ssh_config"
+      - "id_rsa"
+      - "id_rsa.pub"
 
 resources:
   - namespace.yaml
