@@ -12,6 +12,9 @@ if [ -d $website_path ]; then
 		cd -
 	else
 		echo "$website_path is not empty, skip initialization"
+		cd $website_path
+		git pull
+		cd -
 	fi
 else
 	echo "$website_path not exist"
