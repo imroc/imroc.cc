@@ -14,5 +14,5 @@ install:
 	npm install
 outdated:
 	npm outdated
-update: install gen
+update: gen
 	cd imroc.cc && git add -A && git commit -m update && git push
