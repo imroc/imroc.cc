@@ -7,8 +7,6 @@ configMapGenerator:
   - name: script
     files:
       - run.sh
-
-configMapGenerator:
   - name: gitconfig
     files:
       - .gitconfig
