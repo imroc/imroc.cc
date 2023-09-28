@@ -23,8 +23,8 @@ done
 
 if [ $updated ]; then
 	echo "updated"
-	exit 0
+	exit 1
 else
 	echo "noting changed"
-	exit 1
+	exit 0
 fi
