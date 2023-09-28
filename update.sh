@@ -1,6 +1,6 @@
 #!/bin/bash
 
-updated=1
+updated="no"
 
 git fetch
 HEADHASH=$(git rev-parse HEAD)
@@ -9,10 +9,10 @@ UPSTREAMHASH=$(git rev-parse master@{upstream})
 if [ "$HEADHASH" != "$UPSTREAMHASH" ]; then
 	echo "updating..."
 	git pull
-	updated=0
+	updated="yes"
 fi
 
-if [ $updated ]; then
+if [ "$updated" == "yes" ]; then
 	echo "updated"
 	exit 1
 else

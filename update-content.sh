@@ -7,7 +7,7 @@ dirs=(
 	blog
 )
 
-updated=1
+updated="no"
 for dir in ${dirs[@]}; do
 	cd $dir
 	git fetch
@@ -16,12 +16,12 @@ for dir in ${dirs[@]}; do
 	if [ "$HEADHASH" != "$UPSTREAMHASH" ]; then
 		echo "updating..."
 		git pull
-		updated=0
+		updated="yes"
 	fi
 	cd -
 done
 
-if [ $updated ]; then
+if [ "$updated" == "yes" ]; then
 	echo "updated"
 	exit 1
 else
