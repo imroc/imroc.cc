@@ -8,7 +8,15 @@ if [ -d $website_path ]; then
 		echo "$website_path is empty, start init..."
 		git clone --depth=1 $repo $website_path
 		cd $website_path
-		make init
+		while true; do
+			make init
+			if [ "$?" != "0" ]; then
+				echo "init failed, retry..."
+				sleep 10
+			else
+				break
+			fi
+		done
 		cd -
 	else
 		echo "$website_path is not empty, skip initialization"
