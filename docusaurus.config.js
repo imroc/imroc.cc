@@ -6,7 +6,7 @@ const path = require('path')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'roc',
+  title: 'roc 云原生',
   tagline: 'roc 云原生',
   favicon: 'img/logo.png',
 
@@ -133,13 +133,11 @@ const config = {
     ],
   ],
 
-  clientModules: [require.resolve('./src/clientModules/routeModules.ts')],
+  // clientModules: [require.resolve('./src/clientModules/routeModules.ts')],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      // image: 'img/docusaurus-social-card.jpg',
       algolia: {
         appId: 'ZYXQ3PWXL9',
         apiKey: '69800e3da186c48e981785d47ee09e6e',

@@ -11,13 +11,9 @@ import {
   useSpring,
   useTransform,
   useVelocity,
+  wrap,
 } from 'framer-motion'
 import SectionTitle from '../SectionTitle'
-
-const wrap = (min: number, max: number, v: number) => {
-  const rangeSize = max - min
-  return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min
-}
 
 const removeHttps = (url: string) => {
   return url.replace(/(^\w+:|^)\/\//, '')
