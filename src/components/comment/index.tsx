@@ -1,15 +1,9 @@
 import React from 'react'
 import { useColorMode } from '@docusaurus/theme-common'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-// import { ThemeConfig } from '@docusaurus/preset-classic'
 import BrowserOnly from '@docusaurus/BrowserOnly'
 import Giscus, { GiscusProps } from '@giscus/react'
 import { useLocation } from '@docusaurus/router';
-
-
-interface CustomThemeConfig extends ThemeConfig {
-  giscus: GiscusProps & { darkTheme: string }
-}
 
 const defaultConfig: GiscusProps = {
   id: 'comments',
@@ -55,7 +49,7 @@ export default function Comment(): JSX.Element {
       break;
   }
 
-  if (giscus.repo === "") {
+  if (!giscus.repo) {
     return (<BrowserOnly></BrowserOnly>)
   }
 
