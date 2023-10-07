@@ -49,7 +49,7 @@ export default function Comment(): JSX.Element {
   }
 
   if (!giscus.repo) {
-    return (<BrowserOnly></BrowserOnly>)
+    return ('')
   }
 
   if (!giscus.repo || !giscus.repoId || !giscus.categoryId) {
