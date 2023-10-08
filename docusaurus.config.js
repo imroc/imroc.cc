@@ -255,10 +255,12 @@ const config = {
           {
             className: 'code-block-update-line',
             line: 'highlight-update-line',
-            block: {
-              start: 'highlight-update-start',
-              end: 'highlight-update-end'
-            }
+            block: { start: 'highlight-update-start', end: 'highlight-update-end' }
+          },
+          {
+            className: 'code-block-error-line',
+            line: 'highlight-error-line',
+            block: { start: 'highlight-error-start', end: 'highlight-error-end' }
           },
         ],
         // languages enabled by default: https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts#L9-L23

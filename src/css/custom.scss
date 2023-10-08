@@ -51,6 +51,12 @@
     background-color: #362d1e;
   }
 }
+.code-block-error-line {
+  background-color: #ff000020;
+  span[class*='codeLineNumber'] {
+    background-color: #ff000020;
+  }
+}
 
 // https://github.com/nextauthjs/next-auth/blob/v4/docs/src/css/index.css#L79C28-L79C28
 // .docusaurus-highlight-code-line {
