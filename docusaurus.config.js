@@ -83,32 +83,38 @@ const config = {
       },
     ],
     [
+      /** @type {import('@docusaurus/plugin-content-docs').PluginOptions} */
       '@docusaurus/plugin-content-docs',
-      {
+      ({
         id: 'kubernetes',
         path: 'kubernetes',
+        exclude: ['codeblock/**'],
         routeBasePath: '/kubernetes',
         sidebarPath: require.resolve('./kubernetes/sidebars.js'),
         editUrl: ({ docPath }) =>
           `https://github.com/imroc/kubernetes-guide/edit/master/${docPath}`,
-      },
+      }),
     ],
     [
       '@docusaurus/plugin-content-docs',
-      {
+      /** @type {import('@docusaurus/plugin-content-docs').PluginOptions} */
+      ({
         id: 'istio',
         path: 'istio',
+        exclude: ['codeblock/**'],
         routeBasePath: '/istio',
         sidebarPath: require.resolve('./istio/sidebars.js'),
         editUrl: ({ docPath }) =>
           `https://github.com/imroc/istio-guide/edit/master/${docPath}`,
-      },
+      }),
     ],
     [
       '@docusaurus/plugin-content-docs',
-      {
+      /** @type {import('@docusaurus/plugin-content-docs').PluginOptions} */
+      ({
         id: 'note',
         path: 'note',
+        exclude: ['codeblock/**'],
         routeBasePath: '/note',
         sidebarPath: require.resolve('./note/sidebars.js'),
         remarkPlugins: [
@@ -116,7 +122,7 @@ const config = {
         ],
         editUrl: ({ docPath }) =>
           `https://github.com/imroc/imroc.cc/edit/master/note/${docPath}`,
-      },
+      }),
     ],
   ],
   presets: [
