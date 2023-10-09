@@ -2,6 +2,7 @@ import React from 'react';
 import CodeBlock from '@theme/CodeBlock';
 import { useLocation } from '@docusaurus/router';
 import * as path from 'path-browserify';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
 let extToLang = new Map([
   ["sh", "bash"],
@@ -9,7 +10,11 @@ let extToLang = new Map([
 ]);
 
 export default function FileBlock({ file, showFileName, ...prop }: { file: string, showFileName?: boolean }) {
-  const urlPath = useLocation().pathname.replace(/^\/|\/$/g, '');
+  var urlPath = useLocation().pathname.replace(/^\/|\/$/g, '');
+  const { i18n } = useDocusaurusContext()
+  if (i18n.currentLocale != i18n.defaultLocale) {
+    urlPath = urlPath.replace(/^[^\/]*\/?/g, '')
+  }
   const firstSlashIndex = urlPath.indexOf('/');
   var topPath: string = ""
   if (firstSlashIndex !== -1) {
@@ -17,6 +22,7 @@ export default function FileBlock({ file, showFileName, ...prop }: { file: strin
   } else {
     topPath = urlPath
   }
+
   const filename = path.basename(file);
   var language = path.extname(filename).replace(/^\./, '')
   const langMappingName = extToLang.get(language)
