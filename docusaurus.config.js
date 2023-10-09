@@ -91,6 +91,9 @@ const config = {
         exclude: ['codeblock/**'],
         routeBasePath: '/kubernetes',
         sidebarPath: require.resolve('./kubernetes/sidebars.js'),
+        remarkPlugins: [
+          [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
+        ],
         editUrl: ({ docPath }) =>
           `https://github.com/imroc/kubernetes-guide/edit/master/${docPath}`,
       }),
@@ -104,6 +107,9 @@ const config = {
         exclude: ['codeblock/**'],
         routeBasePath: '/istio',
         sidebarPath: require.resolve('./istio/sidebars.js'),
+        remarkPlugins: [
+          [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
+        ],
         editUrl: ({ docPath }) =>
           `https://github.com/imroc/istio-guide/edit/master/${docPath}`,
       }),
