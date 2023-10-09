@@ -1,4 +1,4 @@
-import React from 'react';
+inport React from 'react';
 // Import the original mapper
 import MDXComponents from '@theme-original/MDXComponents';
 
