@@ -17,13 +17,13 @@ if [ -d $website_path ]; then
 				break
 			fi
 		done
-		cd - 1>/dev/null
+		cd - &>/dev/null
 	else
 		echo "$website_path is not empty, skip initialization"
 		cd $website_path
 		git reset --hard HEAD
 		git pull
-		cd - 1>/dev/null
+		cd - &>/dev/null
 	fi
 else
 	echo "$website_path not exist"

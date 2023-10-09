@@ -16,6 +16,5 @@ if [ "$updated" == "yes" ]; then
 	echo "updated"
 	exit 1
 else
-	echo "noting changed"
 	exit 0
 fi

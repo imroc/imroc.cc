@@ -18,13 +18,12 @@ for dir in ${dirs[@]}; do
 		git pull
 		updated="yes"
 	fi
-	cd -
+	cd - &>/dev/null
 done
 
 if [ "$updated" == "yes" ]; then
 	echo "updated"
 	exit 1
 else
-	echo "noting changed"
 	exit 0
 fi
