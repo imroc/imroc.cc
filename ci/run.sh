@@ -42,7 +42,7 @@ while true; do
 	if [ "$website_updated" == "1" ]; then
 		npm install
 	fi
-	if [ "$content_updated" == "1" ]; then
+	if [ "$website_updated" == "1" ] || [ "$content_updated" == "1" ]; then
 		make update
 	fi
 done
