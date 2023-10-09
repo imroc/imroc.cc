@@ -10,11 +10,16 @@ let extToLang = new Map([
 ]);
 
 export default function FileBlock({ file, showFileName, ...prop }: { file: string, showFileName?: boolean }) {
+  // get url path without "/" prefix and suffix
   var urlPath = useLocation().pathname.replace(/^\/|\/$/g, '');
+
+  // remove locale prefix in urlPath
   const { i18n } = useDocusaurusContext()
   if (i18n.currentLocale != i18n.defaultLocale) {
     urlPath = urlPath.replace(/^[^\/]*\/?/g, '')
   }
+
+  // find topPath
   const firstSlashIndex = urlPath.indexOf('/');
   var topPath: string = ""
   if (firstSlashIndex !== -1) {
@@ -23,17 +28,24 @@ export default function FileBlock({ file, showFileName, ...prop }: { file: strin
     topPath = urlPath
   }
 
+  // find file content according to topPath and file path param
+  var content = require('!!raw-loader!@site/' + topPath + "/codeblock/" + file)?.default
+  content = content.replace(/\t/g, "  "); // replace tab to 2 spaces
+
+  // infer language of code block based on filename extension
   const filename = path.basename(file);
   var language = path.extname(filename).replace(/^\./, '')
   const langMappingName = extToLang.get(language)
   if (langMappingName) {
     language = langMappingName
   }
-  var content = require('!!raw-loader!@site/' + topPath + "/codeblock/" + file)?.default
-  content = content.replace(/\t/g, "  "); // replace tab to 2 spaces
-  if (!prop.title && showFileName) { // set title to filename if showFileName is set and title is not set
+
+
+  // set title to filename if showFileName is set and title is not set
+  if (!prop.title && showFileName) {
     prop.title = filename
   }
+
   return (
     <CodeBlock language={language} {...prop}>
       {content}
