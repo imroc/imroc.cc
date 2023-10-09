@@ -21,7 +21,7 @@ if [ -d $website_path ]; then
 	else
 		echo "$website_path is not empty, skip initialization"
 		cd $website_path
-		git reset --hard HEAD
+		git reset --hard HEAD &>/dev/null
 		git pull
 		cd - &>/dev/null
 	fi
@@ -36,7 +36,7 @@ while true; do
 	sleep 10
 	./update-content.sh
 	content_updated="$?"
-	git reset --hard HEAD
+	git reset --hard HEAD &>/dev/null
 	./update.sh
 	website_updated="$?"
 	if [ "$website_updated" == "1" ]; then
