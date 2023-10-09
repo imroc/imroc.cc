@@ -40,7 +40,6 @@ export default function FileBlock({ file, showFileName, ...prop }: { file: strin
     language = langMappingName
   }
 
-
   // set title to filename if showFileName is set and title is not set
   if (!prop.title && showFileName) {
     prop.title = filename
