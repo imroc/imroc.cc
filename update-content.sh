@@ -7,6 +7,21 @@ dirs=(
 	blog
 )
 
+if [ "$1" == "push" ]; then
+	for dir in ${dirs[@]}; do
+		cd $dir
+		if [[ $(git status --porcelain) ]]; then
+			echo "found new changes in $dir, commit and push"
+			git add -A
+			msg="update at $(date '+%Y-%m-%d %H:%M:%S')"
+			git commit -m "${1:-$msg}"
+			git push
+		fi
+		cd - &>/dev/null
+	done
+	exit 0
+fi
+
 updated="no"
 for dir in ${dirs[@]}; do
 	cd $dir

@@ -16,3 +16,6 @@ outdated:
 	npm outdated
 update: gen
 	cd imroc.cc && git add -A && git commit -m update && git push
+push:
+	./update-content.sh push
+	./update.sh push
