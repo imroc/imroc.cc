@@ -19,22 +19,29 @@ export default function FileBlock({ file, showFileName, ...prop }: { file: strin
     urlPath = urlPath.replace(/^[^\/]*\/?/g, '')
   }
 
-  // find topPath
-  const firstSlashIndex = urlPath.indexOf('/');
-  var topPath: string = ""
-  if (firstSlashIndex !== -1) {
-    topPath = urlPath.substring(0, firstSlashIndex)
+  // find file content according to topPath and file path param
+  var filepath = ""
+  if (file.startsWith("@site/")) {
+    filepath = file.replace(/^@site\//g, '')
   } else {
-    topPath = urlPath
+    // find topPath
+    const firstSlashIndex = urlPath.indexOf('/');
+    var topPath: string = ""
+    if (firstSlashIndex !== -1) {
+      topPath = urlPath.substring(0, firstSlashIndex)
+    } else {
+      topPath = urlPath
+    }
+    filepath = topPath + "/_codeblock/" + file
   }
 
-  // find file content according to topPath and file path param
-  var content = file.startsWith("@site/") ? file : require('!!raw-loader!@site/' + topPath + "/_codeblock/" + file)?.default
+  // load file raw content according to filepath
+  var content = require('!!raw-loader!@site/' + filepath)?.default
   content = content.replace(/\t/g, "  "); // replace tab to 2 spaces
 
   // infer language of code block based on filename extension if language is not set
+  const filename = path.basename(file);
   if (!prop.language) {
-    const filename = path.basename(file);
     var language = path.extname(filename).replace(/^\./, '')
     const langMappingName = extToLang.get(language)
     if (langMappingName) {
