@@ -88,7 +88,7 @@ const config = {
       ({
         id: 'kubernetes',
         path: 'kubernetes',
-        exclude: ['codeblock/**'],
+        exclude: ['_codeblock/**'],
         routeBasePath: '/kubernetes',
         sidebarPath: require.resolve('./kubernetes/sidebars.js'),
         remarkPlugins: [
@@ -104,7 +104,7 @@ const config = {
       ({
         id: 'istio',
         path: 'istio',
-        exclude: ['codeblock/**'],
+        exclude: ['_codeblock/**'],
         routeBasePath: '/istio',
         sidebarPath: require.resolve('./istio/sidebars.js'),
         remarkPlugins: [
@@ -120,7 +120,7 @@ const config = {
       ({
         id: 'note',
         path: 'note',
-        exclude: ['codeblock/**'],
+        exclude: ['_codeblock/**'],
         routeBasePath: '/note',
         sidebarPath: require.resolve('./note/sidebars.js'),
         remarkPlugins: [

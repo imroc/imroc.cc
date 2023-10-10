@@ -2,7 +2,7 @@ import React from 'react';
 import CodeBlock from '@theme/CodeBlock';
 import { useLocation } from '@docusaurus/router';
 import * as path from 'path-browserify';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 let extToLang = new Map([
   ["sh", "bash"],
@@ -29,7 +29,7 @@ export default function FileBlock({ file, showFileName, ...prop }: { file: strin
   }
 
   // find file content according to topPath and file path param
-  var content = require('!!raw-loader!@site/' + topPath + "/codeblock/" + file)?.default
+  var content = require('!!raw-loader!@site/' + topPath + "/_codeblock/" + file)?.default
   content = content.replace(/\t/g, "  "); // replace tab to 2 spaces
 
   // infer language of code block based on filename extension
