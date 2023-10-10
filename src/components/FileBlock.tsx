@@ -29,10 +29,10 @@ export default function FileBlock({ file, showFileName, ...prop }: { file: strin
   }
 
   // find file content according to topPath and file path param
-  var content = require('!!raw-loader!@site/' + topPath + "/_codeblock/" + file)?.default
+  var content = file.startsWith("@site/") ? file : require('!!raw-loader!@site/' + topPath + "/_codeblock/" + file)?.default
   content = content.replace(/\t/g, "  "); // replace tab to 2 spaces
 
-  // infer language of code block based on filename extension
+  // infer language of code block based on filename extension if language is not set
   if (!prop.language) {
     const filename = path.basename(file);
     var language = path.extname(filename).replace(/^\./, '')
