@@ -33,11 +33,14 @@ export default function FileBlock({ file, showFileName, ...prop }: { file: strin
   content = content.replace(/\t/g, "  "); // replace tab to 2 spaces
 
   // infer language of code block based on filename extension
-  const filename = path.basename(file);
-  var language = path.extname(filename).replace(/^\./, '')
-  const langMappingName = extToLang.get(language)
-  if (langMappingName) {
-    language = langMappingName
+  if (!prop.language) {
+    const filename = path.basename(file);
+    var language = path.extname(filename).replace(/^\./, '')
+    const langMappingName = extToLang.get(language)
+    if (langMappingName) {
+      language = langMappingName
+    }
+    prop.language = language
   }
 
   // set title to filename if showFileName is set and title is not set
@@ -46,7 +49,7 @@ export default function FileBlock({ file, showFileName, ...prop }: { file: strin
   }
 
   return (
-    <CodeBlock language={language} {...prop}>
+    <CodeBlock {...prop}>
       {content}
     </CodeBlock>
   );
