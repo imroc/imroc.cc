@@ -127,7 +127,7 @@ const config = {
           [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
         ],
         editUrl: ({ docPath }) =>
-          `https://github.com/imroc/imroc.cc/edit/master/note/${docPath}`,
+          `https://github.com/imroc/note/edit/master/${docPath}`,
       }),
     ],
   ],
