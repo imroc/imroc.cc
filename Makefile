@@ -13,7 +13,7 @@ init: install
 start:
 	npm run start
 gen:
-	NODE_OPTIONS="--max-old-space-size=8192" npx docusaurus build --out-dir=./imroc.cc/out
+	NODE_OPTIONS="--max-old-space-size=30720" npx docusaurus build --out-dir=./imroc.cc/out
 install:
 	npm install
 outdated:
