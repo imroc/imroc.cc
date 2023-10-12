@@ -3,6 +3,7 @@ SHELL := /bin/bash
 push:
 	./update-content.sh push
 	./update.sh push
+
 init: install
 	git clone --depth=1 https://github.com/imroc/blog.git blog
 	git clone --depth=1 https://github.com/imroc/note.git note

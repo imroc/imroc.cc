@@ -14,7 +14,7 @@ if [ "$1" == "push" ]; then
 			echo "found new changes in $dir, commit and push"
 			git add -A
 			msg="update at $(date '+%Y-%m-%d %H:%M:%S')"
-			git commit -m "${1:-$msg}"
+			git commit -m "${msg}"
 			git push
 		fi
 		cd - &>/dev/null
