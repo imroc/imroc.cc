@@ -83,22 +83,6 @@ const config = {
       },
     ],
     [
-      /** @type {import('@docusaurus/plugin-content-docs').PluginOptions} */
-      '@docusaurus/plugin-content-docs',
-      ({
-        id: 'kubernetes',
-        path: 'kubernetes',
-        exclude: ['_codeblock/**'],
-        routeBasePath: '/kubernetes',
-        sidebarPath: require.resolve('./kubernetes/sidebars.js'),
-        remarkPlugins: [
-          [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
-        ],
-        editUrl: ({ docPath }) =>
-          `https://github.com/imroc/kubernetes-guide/edit/master/${docPath}`,
-      }),
-    ],
-    [
       '@docusaurus/plugin-content-docs',
       /** @type {import('@docusaurus/plugin-content-docs').PluginOptions} */
       ({
@@ -170,7 +154,7 @@ const config = {
             items: [
               {
                 to: '/kubernetes',
-                label: 'Kubernetes 实践指南',
+                href: 'https://imroc.cc/kubernetes',
               },
               {
                 to: '/istio',
@@ -203,7 +187,7 @@ const config = {
             items: [
               {
                 label: 'Kubenretes 实践指南',
-                to: '/kubernetes',
+                href: 'https://imroc.cc/kubernetes',
               },
               {
                 label: 'istio 实践指南',

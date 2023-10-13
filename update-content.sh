@@ -1,7 +1,6 @@
 #!/bin/bash
 
 dirs=(
-	kubernetes
 	istio
 	note
 	blog
