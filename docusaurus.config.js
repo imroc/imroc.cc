@@ -86,22 +86,6 @@ const config = {
       '@docusaurus/plugin-content-docs',
       /** @type {import('@docusaurus/plugin-content-docs').PluginOptions} */
       ({
-        id: 'istio',
-        path: 'istio',
-        exclude: ['_codeblock/**'],
-        routeBasePath: '/istio',
-        sidebarPath: require.resolve('./istio/sidebars.js'),
-        remarkPlugins: [
-          [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
-        ],
-        editUrl: ({ docPath }) =>
-          `https://github.com/imroc/istio-guide/edit/master/${docPath}`,
-      }),
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').PluginOptions} */
-      ({
         id: 'note',
         path: 'note',
         exclude: ['_codeblock/**'],
@@ -157,8 +141,8 @@ const config = {
                 href: 'https://imroc.cc/kubernetes',
               },
               {
-                to: '/istio',
                 label: 'istio 实践指南',
+                href: 'https://imroc.cc/istio',
               },
             ]
           },
@@ -191,7 +175,7 @@ const config = {
               },
               {
                 label: 'istio 实践指南',
-                to: '/istio',
+                href: 'https://imroc.cc/istio',
               },
             ],
           },
