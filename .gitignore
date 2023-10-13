@@ -26,8 +26,5 @@ id_rsa
 id_rsa.pub
 
 # books
-/kubernetes
-/istio
-/note
 /blog
 /imroc.cc

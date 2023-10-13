@@ -82,22 +82,6 @@ const config = {
           `https://github.com/imroc/blog/edit/master/${blogPath}`
       },
     ],
-    [
-      '@docusaurus/plugin-content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').PluginOptions} */
-      ({
-        id: 'note',
-        path: 'note',
-        exclude: ['_codeblock/**'],
-        routeBasePath: '/note',
-        sidebarPath: require.resolve('./note/sidebars.js'),
-        remarkPlugins: [
-          [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
-        ],
-        editUrl: ({ docPath }) =>
-          `https://github.com/imroc/note/edit/master/${docPath}`,
-      }),
-    ],
   ],
   presets: [
     [
@@ -153,7 +137,7 @@ const config = {
           {
             label: '技术笔记',
             position: 'right',
-            to: '/note',
+            href: 'https://imroc.cc/note',
           },
           {
             type: 'localeDropdown',
@@ -199,7 +183,7 @@ const config = {
               },
               {
                 label: '技术笔记',
-                to: '/note',
+                to: 'https://imroc.cc/note',
               },
               {
                 label: 'GitHub 主页',

@@ -1,8 +1,6 @@
 #!/bin/bash
 
 dirs=(
-	istio
-	note
 	blog
 )
 
