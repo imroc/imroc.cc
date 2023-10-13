@@ -13,10 +13,10 @@ init: install
 start:
 	npm run start
 gen:
-	NODE_OPTIONS="--max-old-space-size=30720" npx docusaurus build --out-dir=./imroc.cc/out
+	node_options="--max-old-space-size=30720" npx docusaurus build --out-dir=./imroc.cc/out
 install:
 	npm install
 outdated:
 	npm outdated
 update: gen
-	cd imroc.cc && git add -A && git commit -m update && git push
+	cd imroc.cc && git add -a && git commit -m update && git push
