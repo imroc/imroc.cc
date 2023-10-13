@@ -113,8 +113,6 @@ const config = {
     ],
   ],
 
-  clientModules: [require.resolve('./src/clientModules/routeModules.ts')],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
