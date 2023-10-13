@@ -7,7 +7,6 @@ push:
 init: install
 	git clone --depth=1 https://github.com/imroc/blog.git blog
 	git clone --depth=1 https://github.com/imroc/note.git note
-	git clone --depth=1 https://github.com/imroc/istio-guide.git istio
 	git clone --depth=1 git@gitee.com:imroc/imroc.cc.git imroc.cc
 
 start:
