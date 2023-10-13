@@ -153,7 +153,7 @@ const config = {
             label: '电子书',
             items: [
               {
-                to: '/kubernetes',
+                label: 'Kubernetes 实践指南',
                 href: 'https://imroc.cc/kubernetes',
               },
               {
@@ -186,7 +186,7 @@ const config = {
             title: '电子书',
             items: [
               {
-                label: 'Kubenretes 实践指南',
+                label: 'Kubernetes 实践指南',
                 href: 'https://imroc.cc/kubernetes',
               },
               {
