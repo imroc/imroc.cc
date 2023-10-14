@@ -18,13 +18,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-.gitconfig
-.git-credentials
-.ssh
-id_rsa
-id_rsa.pub
-
-# books
-/blog
-/imroc.cc

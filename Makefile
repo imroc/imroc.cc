@@ -1,7 +1,6 @@
 SHELL := /bin/bash
 
 init: install
-	git clone --depth=1 https://github.com/imroc/blog.git blog
 	git clone --depth=1 git@gitee.com:imroc/imroc.cc.git build
 
 start:
