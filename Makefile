@@ -8,7 +8,7 @@ start:
 	npm run start
 
 gen:
-	npx docusaurus build --out-dir=./imroc.cc/out
+	npx docusaurus build --out-dir=./build/out
 
 install:
 	npm install
