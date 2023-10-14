@@ -165,7 +165,7 @@ export default function Hero() {
           variants={variants}
         >
           <Translate id="homepage.hero.text">
-            {`云原生老司机一枚，热爱开源和分享，欢迎一起交流。`}
+            {`云原生老司机一枚，热爱开源和分享，欢迎一起交流`}
           </Translate>
         </motion.p>
 
