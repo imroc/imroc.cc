@@ -1,11 +1,11 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+import path from 'path-browserify';
+import type { Config } from '@docusaurus/types';
+import PrismDark from './src/utils/prismDark';
 
 const beian = '蜀ICP备2021009081号-1'
-const path = require('path')
+// const path = require('path')
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: 'roc 云原生',
   tagline: 'roc 云原生',
   favicon: 'img/logo.png',
@@ -202,7 +202,7 @@ const config = {
         email: 'mailto:roc@imroc.cc',
       },
       prism: {
-        theme: require('prism-react-renderer/themes/vsDark'),
+        theme: PrismDark,
         magicComments: [
           {
             className: 'code-block-highlighted-line',
