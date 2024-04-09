@@ -27,6 +27,15 @@ export const projects: Project[] = [
     type: '我创建的',
   },
   {
+    title: 'TKE 实践指南',
+    description: 'Kubernetes 相关实战经验与总结',
+    preview: '/img/project/book.svg',
+    website: 'https://imroc.cc/tke',
+    source: 'https://github.com/imroc/tke-guide',
+    tags: ['book'],
+    type: '我创建的',
+  },
+  {
     title: 'cert-manager-webhook-dnspod',
     description: 'cert-manager 的 dnspod webhook 实现',
     preview: '/img/project/cert-manager.svg',
