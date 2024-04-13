@@ -18,6 +18,15 @@ export const projects: Project[] = [
     type: '我创建的',
   },
   {
+    title: 'Kubernetes 排障指南',
+    description: 'Kubernetes 相关排障技能、方法与案例',
+    preview: '/img/project/book.svg',
+    website: 'https://imroc.cc/kubernetes/troubleshooting',
+    source: 'https://github.com/imroc/troubleshooting-kubernetes',
+    tags: ['book'],
+    type: '我创建的',
+  },
+  {
     title: 'Istio 实践指南',
     description: 'Istio 相关实战经验与总结',
     preview: '/img/project/book.svg',

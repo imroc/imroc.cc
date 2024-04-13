@@ -123,6 +123,10 @@ const config: Config = {
                 href: 'https://imroc.cc/kubernetes',
               },
               {
+                label: 'Kubernetes 排障指南',
+                href: 'https://imroc.cc/kubernetes/troubleshooting',
+              },
+              {
                 label: 'istio 实践指南',
                 href: 'https://imroc.cc/istio',
               },
