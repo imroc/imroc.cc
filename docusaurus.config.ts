@@ -127,12 +127,12 @@ const config: Config = {
                 href: 'https://imroc.cc/kubernetes/troubleshooting',
               },
               {
-                label: 'istio 实践指南',
-                href: 'https://imroc.cc/istio',
-              },
-              {
                 label: 'TKE 实践指南',
                 href: 'https://imroc.cc/tke',
+              },
+              {
+                label: 'istio 实践指南',
+                href: 'https://imroc.cc/istio',
               },
             ]
           },
